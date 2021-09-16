@@ -32,34 +32,32 @@ function statement(invoice, plays) {
   return result;
 }
 
+function amountFor(perf, play) {
+  //<= 값이 바뀌지 않는 변수는 매개변수로 전달
 
+  let thisAmount = 0; //<= 변수를 초기화 하는 코드
 
-
-function amountFor(aPerformance, play) { //<= 명확한 이름으로 변경 //부정관사 a/an
-
-  let result = 0; // <= thisAmount 를 result로 명확히 변경
   switch (play.type) {
     case "tragedy": 
-    result = 40000;
-      if (aPerformance.audience > 30) {
-        result += 1000 * (aPerformance.audience - 30);
+      thisAmount = 40000;
+      if (perf.audience > 30) {
+        thisAmount += 1000 * (perf.audience - 30);
       }
       break;
 
-    case "comedy": 
-    result = 30000;
-      if (aPerformance.audience > 20) {
-        result += 10000 + 500 * (aPerformance.audience - 20);
+    case "comedy":
+      thisAmount = 30000;
+      if (perf.audience > 20) {
+        thisAmount += 10000 + 500 * (perf.audience - 20);
       }
-      result += 300 * aPerformance.audience;
+      thisAmount += 300 * perf.audience;
       break;
 
     default:
       throw new Error(`알 수 없는 장르 : ${play.type}`);
   }
 
-  return result; 
+  return thisAmount; //<= 함수 안에서 값이 바뀌는 변수 반환
 }
-
 
 console.log(statement(invoices[0], plays));

@@ -44,9 +44,8 @@ function statement(invoice, plays) {
     if ("comedy" === play.type) volumeCredits += Math.floor(perf.audience / 5);
 
     //청구내역을 출력한다.
-    result += `${play.name}: ${format(thisAmount / 100)} (${
-      perf.audience
-    }석)\n`;
+    result += `${play.name}: ${format(thisAmount / 100)} (${perf.audience
+      }석)\n`;
     totalAmount += thisAmount;
   }
 

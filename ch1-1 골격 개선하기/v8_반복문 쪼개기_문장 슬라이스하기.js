@@ -1,5 +1,5 @@
-import invoices from "./invoices.js.js";
-import plays from "./plays.js.js";
+import invoices from "../invoices.js";
+import plays from "../plays.js";
 
 function statement(invoice, plays) {
   let totalAmount = 0;

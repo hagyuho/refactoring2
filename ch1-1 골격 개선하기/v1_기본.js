@@ -1,5 +1,5 @@
-import invoices from "./invoices.js";
-import plays from "./plays.js";
+import invoices from "../invoices.js";
+import plays from "../plays.js";
 
 
 

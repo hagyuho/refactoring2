@@ -44,10 +44,6 @@ function totalAmount(invoice) {
   return result;
 }
 
-function playFor(aPerformance) {
-  return plays[aPerformance.playID];
-}
-
 function totalVolumnCredits(invoice) {
   let result = 0;
   for (let perf of invoice.performances) {
@@ -55,6 +51,11 @@ function totalVolumnCredits(invoice) {
   }
   return result;
 }
+
+function playFor(aPerformance) {
+  return plays[aPerformance.playID];
+}
+
 
 function usd(aNumber) {
   return new Intl.NumberFormat("en-US", {

@@ -27,10 +27,6 @@ function statement(invoice, plays) {
   return result;
 }
 
-function playFor(aPerformance) {
-  return plays[aPerformance.playID];
-}
-
 function amountFor(aPerformance) {// <= 필요없어진 매개변수 제거
 
   let result = 0;
@@ -57,6 +53,10 @@ function amountFor(aPerformance) {// <= 필요없어진 매개변수 제거
   }
 
   return result;
+}
+
+function playFor(aPerformance) {
+  return plays[aPerformance.playID];
 }
 
 console.log(statement(invoices[0], plays));

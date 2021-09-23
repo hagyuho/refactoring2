@@ -32,16 +32,6 @@ function statement(invoice, plays) {
   return result;
 }
 
-
-
-//임시 변수를 질의 함수로 바꾸기
-function playFor(aPerformance){
-  return  plays[aPerformance.playID];
-}
-
-
-
-
 function amountFor(aPerformance, play) {
 
   let result = 0; 
@@ -66,6 +56,11 @@ function amountFor(aPerformance, play) {
   }
 
   return result; 
+}
+
+//임시 변수를 질의 함수로 바꾸기
+function playFor(aPerformance){
+  return  plays[aPerformance.playID];
 }
 
 

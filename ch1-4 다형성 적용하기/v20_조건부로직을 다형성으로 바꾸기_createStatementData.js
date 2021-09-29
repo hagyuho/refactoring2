@@ -5,7 +5,6 @@ class PerformanceCalculator { //<= 공연료 계산기 클래스
   }
 }
 
-
 export default function createStatementData(invoice, plays){ 
   const result = {};
   result.customer = invoice.customer;

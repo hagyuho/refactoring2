@@ -8,7 +8,6 @@ import createStatementData from "../ch1-4 다형성 적용하기/v25_조건부 �
 
 
 console.log(htmlStatement(invoices[0], plays));
-console.log(renderHtmlStatement(invoices[0], plays));
 
 function htmlStatement(invoice, plays) {
   return renderPlainText(createStatementData(invoice,plays)); 
@@ -27,6 +26,7 @@ function renderPlainText(data) {
   return result;
 }
 
+console.log(renderHtmlStatement(invoices[0], plays));
 
 
 function renderHtmlStatement(invoice, plays) {

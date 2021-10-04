@@ -9,7 +9,7 @@ function statement(invoice, plays) {
       perf.audience
     }석)\n`;
   }
-  result += `총액: ${usd(totalAmount(invoice) / 100)}`; 
+  result += `총액: ${usd(totalAmount(invoice))}`; 
   result += `적립 포인트: ${totalVolumnCredits(invoice)}점`; // <= 변수 인라인하기
   return result;
 }

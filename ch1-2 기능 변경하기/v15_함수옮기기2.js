@@ -16,6 +16,20 @@ function enrichPerformance(aPerformance) {
   return result;
 }
 
+function renderPlainText(data, plays) {
+  let result = `청구내역 (고객명: ${data.customer})\n`;
+  
+  for (let perf of data.performances) {
+    result += `${perf.play.name}: ${usd(perf.amount)} (${ //<= amountFor 사용하던 부분을 중간데이터를 사용하도록 바꿈
+      perf.audience
+    }석)\n`;
+  }
+  
+  result += `총액: ${usd(totalAmount(data) / 100)}`;
+  result += `적립 포인트: ${totalVolumnCredits(data)}점`;
+  return result;
+}
+
 function amountFor(aPerformance) {
   let result = 0;
   switch (aPerformance.play.type) { //<= playFor 사용하던 부분을 중간데이터를 사용하도록 바꿈
@@ -41,19 +55,7 @@ function amountFor(aPerformance) {
   return result;
 }
 
-function renderPlainText(data, plays) {
-  let result = `청구내역 (고객명: ${data.customer})\n`;
-  
-  for (let perf of data.performances) {
-    result += `${perf.play.name}: ${usd(perf.amount)} (${ //<= amountFor 사용하던 부분을 중간데이터를 사용하도록 바꿈
-      perf.audience
-    }석)\n`;
-  }
-  
-  result += `총액: ${usd(totalAmount(data) / 100)}`;
-  result += `적립 포인트: ${totalVolumnCredits(data)}점`;
-  return result;
-}
+
 
 
 

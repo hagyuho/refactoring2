@@ -26,8 +26,7 @@ function statement(invoice, plays) {
   return result;
 }
 
-function volumeCreditsFor(perf) {
-  // <= 반복문 내 함수 추출
+function volumeCreditsFor(perf) { // <= 반복문 내 함수 추출
   let result = 0;
   result += Math.max(perf.audience - 30, 0);
   if ("comedy" === playFor(perf).type) result += Math.floor(perf.audience / 5);
@@ -38,11 +37,11 @@ function playFor(aPerformance) {
   return plays[aPerformance.playID];
 }
 
-function amountFor(aPerformance) { // <= 필요없어진 매개변수 제거
+function amountFor(aPerformance) { 
 
   let result = 0;
   switch (
-    playFor(aPerformance).type //<= play를 playFor() 호출로 변경
+    playFor(aPerformance).type 
   ) {
     case "tragedy":
       result = 40000;

@@ -14,7 +14,7 @@ function statement(invoice, plays) {
     totalAmount += amountFor(perf);
   }
 
-  result += `총액: ${usd(totalAmount / 100)}`; // <= 임시변수를 함수 호출로 대체
+  result += `총액: ${usd(totalAmount)}`; // <= 임시변수를 함수 호출로 대체
   result += `적립 포인트: ${volumeCredits}점`;
   return result;
 }

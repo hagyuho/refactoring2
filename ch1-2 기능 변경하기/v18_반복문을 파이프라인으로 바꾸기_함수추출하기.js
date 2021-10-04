@@ -14,7 +14,6 @@ function createStatementData(invoice,plays){ //<=중간데이터 생성을 전�
   return statementData;
 }
 
-
 function renderPlainText(data) {
   let result = `청구내역 (고객명: ${data.customer})\n`;
   

@@ -16,7 +16,7 @@ function statement(invoice, plays) {
   for (let perf of invoice.performances) {
     const play = plays[perf.playID];
 
-    let thisAmount = amountFor(perf, play); // <= 추출한 함수 이용
+    let thisAmount = amountFor(perf, play); 
 
     volumeCredits += Math.max(perf.audience - 30, 0);
     if ("comedy" === play.type) volumeCredits += Math.floor(perf.audience / 5);
@@ -30,9 +30,6 @@ function statement(invoice, plays) {
   result += `적립 포인트: ${volumeCredits}점`;
   return result;
 }
-
-
-
 
 function amountFor(aPerformance, play) { //<= 명확한 이름으로 변경 //부정관사 a/an
 

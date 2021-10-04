@@ -32,9 +32,7 @@ function statement(invoice, plays) {
   return result;
 }
 
-function amountFor(perf, play) {
-  //<= 값이 바뀌지 않는 변수는 매개변수로 전달
-
+function amountFor(perf, play) { //<= 값이 바뀌지 않는 변수는 매개변수로 전달
   let thisAmount = 0; //<= 변수를 초기화 하는 코드
 
   switch (play.type) {
@@ -44,7 +42,6 @@ function amountFor(perf, play) {
         thisAmount += 1000 * (perf.audience - 30);
       }
       break;
-
     case "comedy":
       thisAmount = 30000;
       if (perf.audience > 20) {
@@ -52,7 +49,6 @@ function amountFor(perf, play) {
       }
       thisAmount += 300 * perf.audience;
       break;
-
     default:
       throw new Error(`알 수 없는 장르 : ${play.type}`);
   }

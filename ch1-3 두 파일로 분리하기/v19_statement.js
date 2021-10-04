@@ -2,9 +2,9 @@ import invoices from "../invoices.js";
 import plays from "../plays.js";
 // import createStatementData from "./v19_createStatementData.js"
 // import createStatementData from "../ch1-4 다형성 적용하기/v21_함수선언바꾸기_createStatementData.js"
-//import createStatementData from "../ch1-4 다형성 적용하기/v22_함수옮기기_createStatementData.js"
+import createStatementData from "../ch1-4 다형성 적용하기/v22_함수옮기기_createStatementData.js"
 //import createStatementData from "../ch1-4 다형성 적용하기/v24_조건부 로직을 다형성으로 바꾸기_createStatementData.js"
-import createStatementData from "../ch1-4 다형성 적용하기/v25_조건부 로직을 다형성으로 바꾸기2_createStatementData.js"
+//import createStatementData from "../ch1-4 다형성 적용하기/v25_조건부 로직을 다형성으로 바꾸기2_createStatementData.js"
 
 
 console.log(htmlStatement(invoices[0], plays));
